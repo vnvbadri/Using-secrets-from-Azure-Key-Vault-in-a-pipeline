@@ -36,6 +36,26 @@
           }
         },
         {
+            "allof": [
+              {
+                "field": "type",
+                "equals": "Microsoft.KeyVault/vaults"
+              },
+              {
+                "not": {
+                  "field": "Microsoft.KeyVault/vaults/sku.tier",
+                  "in": [ "Basic" ]
+                }
+              },
+              {
+                "not": {
+                  "field": "Microsoft.KeyVault/vaults/sku.name",
+                  "in": [ "A0" ]
+                }
+              }
+            ]
+        },              
+        {
           "allof": [
             {
               "field": "type",
