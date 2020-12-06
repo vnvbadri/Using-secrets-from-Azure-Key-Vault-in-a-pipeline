@@ -1,9 +1,9 @@
 {
-    "if": {
-      "anyOf": [
-        {
-          "not": {
-            "anyOf": [
+	"if": {
+	  "anyOf": [
+		{
+		  "not": {
+			"anyOf": [
               {
                 "field": "type",
                 "like": "Microsoft.Insights/Components"
@@ -18,6 +18,10 @@
               },
               {
                 "field": "type",
+                "like": "Microsoft.Authorization/roleAssignments"
+              },              
+              {
+                "field": "type",
                 "like": "Microsoft.DBforMySQL/servers/databases"
               },
               {
@@ -30,7 +34,7 @@
               },
               {
                 "field": "type",
-                "in": [ "Microsoft.Insights/Components", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
+                "in": [ "Microsoft.Insights/Components", "Microsoft.Authorization/roleAssignments", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
               }
             ]
           }

@@ -1,22 +1,22 @@
 {
-    "Name": "Spektra Custom RBAC",
-    "Id": null,
-    "IsCustom": true,
-    "Description": "Spektra Training Custom Role.",
-    "Actions": [
-      "Microsoft.Authorization/*/write",
+  "Name":  "Spektra Custom RBAC",
+  "Id":  null,
+  "IsCustom":  true,
+  "Description":  "Spektra Training Custom Role.",
+  "Actions":  [
+      "Microsoft.Authorization/*/read",
       "microsoft.insights/components/*",
       "Microsoft.Resources/deployments/*",
-      "Microsoft.Resources/subscriptions/resourceGroups/write",
+      "Microsoft.Resources/subscriptions/resourceGroups/read",
+      "Microsoft.Authorization/roleAssignments/write",
       "Microsoft.DBforMySQL/servers/write",
       "Microsoft.DBforMySQL/servers/firewallRules/write",
       "Microsoft.DBforMySQL/servers/databases/write",
       "Microsoft.Web/serverFarms/*",
-      "Microsoft.KeyVault/vaults/*",
+      "Microsoft.KeyVault/vaults/*/write",
       "Microsoft.Web/sites/*"
     ],
-    "NotActions": [
-  
-    ]
-  }
+    "NotActions":  [
+  ]
+}
   
