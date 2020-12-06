@@ -18,6 +18,10 @@
               },
               {
                 "field": "type",
+                "like": "Microsoft.Resources/deployments/write"
+              },
+              {
+                "field": "type",
                 "like": "Microsoft.Authorization/roleAssignments"
               },              
               {
