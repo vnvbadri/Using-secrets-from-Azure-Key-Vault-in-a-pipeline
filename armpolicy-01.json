@@ -18,12 +18,16 @@
               },
               {
                 "field": "type",
-                "like": "Microsoft.Resources/deployments/write"
-              },
-              {
-                "field": "type",
                 "like": "Microsoft.Authorization/roleAssignments"
               },              
+              {
+                "field": "type",
+                "like": "Microsoft.DBforMySQL/servers/firewallRules"
+              },                  
+              {
+                "field": "type",
+                "like": "Microsoft.DBforMySQL/servers/configurations"
+              },                
               {
                 "field": "type",
                 "like": "Microsoft.DBforMySQL/servers/databases"
@@ -38,7 +42,15 @@
               },
               {
                 "field": "type",
-                "in": [ "Microsoft.Insights/Components", "Microsoft.Resources/deployments/write", "Microsoft.Authorization/roleAssignments", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
+                "like": "Microsoft.Web/sites/config"
+              },                
+              {
+                "field": "type",
+                "like": "Microsoft.Web/sites/hostNameBindings"
+              },                  
+              {
+                "field": "type",
+                "in": [ "Microsoft.Insights/Components", "Microsoft.Web/sites/config", "Microsoft.Web/sites/hostNameBindings", "Microsoft.DBforMySQL/servers/configurations", "Microsoft.DBforMySQL/servers/firewallRules", "Microsoft.Authorization/roleAssignments", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
               }
             ]
           }
