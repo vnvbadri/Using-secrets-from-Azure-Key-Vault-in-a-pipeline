@@ -7,6 +7,7 @@
       "Microsoft.Authorization/*/write",
       "microsoft.insights/components/*",
       "Microsoft.Resources/deployments/*",
+      "Microsoft.Resources/deployments/write",
       "Microsoft.Resources/subscriptions/resourceGroups/write",
       "Microsoft.Authorization/roleAssignments/write",
       "Microsoft.DBforMySQL/servers/write",
