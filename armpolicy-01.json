@@ -10,7 +10,7 @@
               },
               {
                 "field": "type",
-                "like": "Microsoft.KeyVault/vaults/write"
+                "like": "Microsoft.KeyVault/vaults"
               },
               {
                 "field": "type",
@@ -30,7 +30,7 @@
               },
               {
                 "field": "type",
-                "in": [ "Microsoft.Insights/Components", "Microsoft.KeyVault/vaults/write", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
+                "in": [ "Microsoft.Insights/Components", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
               }
             ]
           }
@@ -44,7 +44,7 @@
               {
                 "not": {
                   "field": "Microsoft.KeyVault/vaults/sku.tier",
-                  "in": [ "Basic" ]
+                  "in": [ "Standard" ]
                 }
               },
               {
