@@ -12,6 +12,7 @@
       "Microsoft.DBforMySQL/servers/firewallRules/write",
       "Microsoft.DBforMySQL/servers/databases/write",
       "Microsoft.Web/serverFarms/*",
+      "Microsoft.KeyVault/vaults/*",
       "Microsoft.Web/sites/*"
     ],
     "NotActions": [
