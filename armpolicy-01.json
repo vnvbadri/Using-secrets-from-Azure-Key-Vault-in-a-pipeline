@@ -44,12 +44,6 @@
               {
                 "field": "type",
                 "equals": "Microsoft.KeyVault/vaults"
-              },
-              {
-                "not": {
-                  "field": "Microsoft.KeyVault/vaults/sku.tier",
-                  "in": [ "Standard" ]
-                }
               }
             ]
         },              
