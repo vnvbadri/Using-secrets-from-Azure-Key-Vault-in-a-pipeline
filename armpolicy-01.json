@@ -38,7 +38,7 @@
               },
               {
                 "field": "type",
-                "in": [ "Microsoft.Insights/Components", "Microsoft.Authorization/roleAssignments", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
+                "in": [ "Microsoft.Insights/Components", "Microsoft.Resources/deployments/write", "Microsoft.Authorization/roleAssignments", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
               }
             ]
           }
