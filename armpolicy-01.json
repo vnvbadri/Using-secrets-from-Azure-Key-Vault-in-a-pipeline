@@ -38,14 +38,6 @@
               }
             ]
           }
-        },
-        {
-            "allof": [
-              {
-                "field": "type",
-                "equals": "Microsoft.KeyVault/vaults"
-              }
-            ]
         },              
         {
           "allof": [
