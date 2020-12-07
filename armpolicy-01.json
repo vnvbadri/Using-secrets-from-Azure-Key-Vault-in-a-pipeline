@@ -50,7 +50,7 @@
               },                  
               {
                 "field": "type",
-                "in": [ "Microsoft.Insights/Components", "Microsoft.Resources/deployments", "Microsoft.Web/sites/config", "Microsoft.Web/sites/hostNameBindings", "Microsoft.DBforMySQL/servers/configurations", "Microsoft.DBforMySQL/servers/firewallRules", "Microsoft.Authorization/roleAssignments", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
+                "in": [ "Microsoft.Resources/deployments", "Microsoft.Web/sites/config", "Microsoft.Web/sites/hostNameBindings", "Microsoft.DBforMySQL/servers/configurations", "Microsoft.DBforMySQL/servers/firewallRules", "Microsoft.Authorization/roleAssignments", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
               }
             ]
           }
