@@ -6,10 +6,6 @@
 			"anyOf": [
               {
                 "field": "type",
-                "like": "Microsoft.Insights/Components"
-              },
-              {
-                "field": "type",
                 "like": "Microsoft.KeyVault/vaults"
               },
               {
