@@ -1,9 +1,9 @@
 {
-	"if": {
-	  "anyOf": [
-		{
-		  "not": {
-			"anyOf": [
+  "if": {
+    "anyOf": [
+      {
+        "not": {
+          "anyOf": [
               {
                 "field": "type",
                 "like": "Microsoft.KeyVault/vaults"
@@ -52,84 +52,91 @@
                 "field": "type",
                 "in": [ "Microsoft.Resources/deployments", "Microsoft.Web/sites/config", "Microsoft.Web/sites/hostNameBindings", "Microsoft.DBforMySQL/servers/configurations", "Microsoft.DBforMySQL/servers/firewallRules", "Microsoft.Authorization/roleAssignments", "Microsoft.KeyVault/vaults", "Microsoft.DBforMySQL/servers/", "Microsoft.DBforMySQL/servers/databases", "Microsoft.Web/serverFarms", "Microsoft.Web/sites" ]
               }
-            ]
-          }
-        },              
-        {
-          "allof": [
-            {
-              "field": "type",
-              "equals": "Microsoft.DBforMySQL/servers"
-            },
-            {
-              "not": {
-                "field": "Microsoft.DBforMySQL/servers/sku.name",
-                "in": [ "B_Gen5_1" ]
-              }
-            },
-            {
-              "not": {
-                "field": "Microsoft.DBforMySQL/servers/sku.tier",
-                "in": [ "Basic" ]
-              }
-            },
-            {
-              "not": {
-                "field": "Microsoft.DBforMySQL/servers/sku.family",
-                "in": [ "Gen5" ]
-              }
-            },
-            {
-              "not": {
-                "field": "Microsoft.DBforMySQL/servers/sku.capacity",
-                "in": [ "1" ]
-              }
-            }
-          ]
-        },
-        {
-          "allof": [
-            {
-              "field": "type",
-              "equals": "Microsoft.Web/serverfarms"
-            },
-            {
-              "not": {
-                "field": "Microsoft.Web/serverfarms/sku.name",
-                "in": [ "B1" ]
-              }
-            },
-            {
-              "not": {
-                "field": "Microsoft.Web/serverfarms/sku.tier",
-                "in": [ "Basic" ]
-              }
-            },
-            {
-              "not": {
-                "field": "Microsoft.Web/serverfarms/sku.size",
-                "in": [ "B1" ]
-              }
-            },            
-            {
-              "not": {
-                "field": "Microsoft.Web/serverfarms/sku.family",
-                "in": [ "B" ]
-              }
-            },
-            {
-              "not": {
-                "field": "Microsoft.Web/serverfarms/sku.capacity",
-                "in": [ "1" ]
-              }
-            }            
           ]
         }
-  
-      ]
-    },
-    "then": {
-      "effect": "deny"
-    }
+      },
+      {
+        "allof": [
+          {
+            "field": "type",
+            "equals": "Microsoft.KeyVault/vaults"
+          },
+          {
+            "not": {
+              "field": "Microsoft.KeyVault/vaults/sku.name",
+              "in": [ "Standard" ]
+            }
+          }
+        ]
+      },      
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.DBforMySQL/servers"
+          },
+          {
+            "not": {
+              "allOf": [
+                {
+                  "field": "Microsoft.DBforMySQL/servers/sku.name",
+                  "in": [ "B_Gen5_1" ]
+                },
+                {
+                  "field": "Microsoft.DBforMySQL/servers/sku.tier",
+                  "in": [ "Basic" ]
+                },
+                {
+                  "field": "Microsoft.DBforMySQL/servers/sku.family",
+                  "in": [ "Gen5" ]
+                },
+                {
+                  "field": "Microsoft.DBforMySQL/servers/sku.capacity",
+                  "in": [ "1" ]
+                }                
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Web/serverfarms"
+          },
+          {
+            "not": {
+              "allOf": [
+                {
+                  "field": "Microsoft.Web/serverfarms/sku.name",
+                  "in": [ "B1" ]
+                },
+                {
+                  "field": "Microsoft.Web/serverfarms/sku.tier",
+                  "in": [ "Basic" ]
+                },
+                {
+                  "field": "Microsoft.Web/serverfarms/sku.family",
+                  "in": [ "B" ]
+                },
+                {
+                  "field": "Microsoft.Web/serverfarms/sku.capacity",
+                  "in": [ "1" ]
+                },
+                {
+                  "field": "Microsoft.Web/serverfarms/sku.size",
+                  "in": [ "B1" ]
+                }                                
+              ]
+            }
+          }
+        ]
+      }      
+
+    ]
+  },
+  "then": {
+    "effect": "deny"
   }
-  
+}
