@@ -68,7 +68,7 @@
             {
               "not": {
                 "field": "Microsoft.DBforMySQL/servers/sku.name",
-                "in": [ "GP_Gen5_1" ]
+                "in": [ "B_Gen5_1" ]
               }
             },
             {
@@ -100,9 +100,33 @@
             {
               "not": {
                 "field": "Microsoft.Web/serverfarms/sku.name",
-                "in": [ "S1" ]
+                "in": [ "B1" ]
               }
-            }
+            },
+            {
+              "not": {
+                "field": "Microsoft.Web/serverfarms/sku.tier",
+                "in": [ "Basic" ]
+              }
+            },
+            {
+              "not": {
+                "field": "Microsoft.Web/serverfarms/sku.size",
+                "in": [ "B1" ]
+              }
+            },            
+            {
+              "not": {
+                "field": "Microsoft.Web/serverfarms/sku.family",
+                "in": [ "B" ]
+              }
+            },
+            {
+              "not": {
+                "field": "Microsoft.Web/serverfarms/sku.capacity",
+                "in": [ "1" ]
+              }
+            }            
           ]
         }
   
