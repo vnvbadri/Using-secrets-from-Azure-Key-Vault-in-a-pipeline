@@ -68,7 +68,7 @@
             {
               "not": {
                 "field": "Microsoft.DBforMySQL/servers/sku.name",
-                "in": [ "GP_Gen5_2" ]
+                "in": [ "GP_Gen5_1" ]
               }
             },
             {
@@ -86,7 +86,7 @@
             {
               "not": {
                 "field": "Microsoft.DBforMySQL/servers/sku.capacity",
-                "in": [ "2" ]
+                "in": [ "1" ]
               }
             }
           ]
